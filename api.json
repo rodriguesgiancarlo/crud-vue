@@ -1,0 +1,14 @@
+{
+  "posts": [
+    {
+      "title": "Primeiro post",
+      "body": "olá mundo!",
+      "id": 1
+    },
+    {
+      "title": "Teste",
+      "body": "oi",
+      "id": 2
+    }
+  ]
+}
