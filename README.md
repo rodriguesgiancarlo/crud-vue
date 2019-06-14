@@ -1,4 +1,6 @@
-# webpack
+# crud-vue
+
+> Exemplo de CRUD em VueJS para a disciplina de Desenvolvimento Web-Cliente, UTFPR Ponta Grossa.
 
 ## Project setup
 ```
