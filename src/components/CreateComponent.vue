@@ -27,7 +27,7 @@
         },
     methods: {
         addPost(){
-            let uri = 'http://localhost:3000/posts';
+            let uri = window.apiUrl + '/posts';
             this.axios.post(uri, this.post).then((response) => {
                 this.$router.push({name: 'posts'});
             });

@@ -26,14 +26,14 @@
             }
         },
         created() {
-            var uri = 'http://localhost:3000/posts/'+this.$route.params.id;
+            var uri = window.apiUrl+'/posts/'+this.$route.params.id;
             this.axios.get(uri).then((response) => {
                 this.post = response.data;
             });
         },
         methods: {
             updatePost() {
-                var uri = 'http://localhost:3000/posts/'+this.$route.params.id;
+                var uri = window.apiUrl+'/posts/'+this.$route.params.id;
                 this.axios.put(uri, this.post).then((response) => {
                     this.$router.push({name: 'posts'});
                 });

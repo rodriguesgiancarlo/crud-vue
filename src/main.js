@@ -4,7 +4,9 @@ import VueAxios from 'vue-axios';
 import axios from 'axios';
 import App from './App.vue';
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
+
+window.apiUrl = 'http://localhost:3000';
 
 
 Vue.use(VueRouter);

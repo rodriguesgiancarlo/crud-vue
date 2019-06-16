@@ -1,0 +1,11 @@
+﻿npm install -g vue-cli
+vue create <diretório>
+npm install axios vue-router vue-axios --save
+npm run serve
+
+
+
+
+Se clonou o projeto do GitHub:
+npm install
+npm run serve
