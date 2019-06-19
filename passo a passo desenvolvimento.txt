@@ -1,0 +1,23 @@
+﻿PASSO A PASSO DESENVOLVIMENTO
+
+1º) Arquivo main.js
+    
+	- Importação/configuração do Vue e suas bibliotecas
+    
+	- Importação dos componentes da aplicação
+    
+	- Definição das rotas
+    
+	- Instanciar objeto Vue
+
+
+
+2º) Arquivo App.vue
+    
+	- Componente principal da aplicação, local onde está definido o menu e onde os componentes serão renderizados
+
+
+
+3º) Criação dos componentes da página
+    
+	- Três partes: Template, style e script
