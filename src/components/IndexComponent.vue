@@ -1,21 +1,21 @@
 <template>
     <div>
-      <h1>Postagens</h1>
+      <h1>Salas</h1>
         <div class="row">
             <div class="col-md-10"></div>
             <div class="col-md-2">
-                <router-link :to="{ name: 'create' }" class="btn btn-success">Nova postagem</router-link>
+                <router-link :to="{ name: 'salas' }" class="btn btn-danger">Nova Sala</router-link>
             </div>
         </div>
         <br/>
 
 
-        <div class="card" v-for="post in posts" :key="post.id">
+        <div class="card" v-for="sala in salas" :key="sala.id">
             <div class="card-body">
-                <h5 class="card-title">{{ post.title }}</h5>
-                <p class="card-text">{{ post.body }}</p>
-                <router-link :to="{name: 'edit', params: { id: post.id }}" class="btn btn-primary">Editar</router-link>
-                <button class="btn btn-danger" @click.prevent="deletePost(post.id)">Remover</button>
+                <p class="card-text">{{ sala.id }}</p>
+                <p class="card-text">{{ sala.lotacao_maxima }}</p>
+                <router-link :to="{name: 'editcapacity', params: { id: sala.id }}" class="btn btn-primary">Editar</router-link>
+                <button class="btn btn-danger" @click.prevent="deleteSala(sala.id)">Remover</button>
             </div>
         </div>
   </div>
@@ -26,19 +26,21 @@
     export default {
         data() {
             return {
-                posts: []
+                salas: []
             }
         },
         created() {
-            this.axios.get(window.apiUrl+'/posts').then(response => {
-                this.posts = response.data;
+            let uri = 'http://localhost:3000/salas';
+            this.axios.get(uri).then(response => {
+                this.salas = response.data;
             })
         },
 
         methods: {
-            deletePost(id) {
-                this.axios.delete(window.apiUrl+'/posts/'+id).then(response => {
-                    this.posts.splice(this.posts.indexOf(id), 1);
+            deleteSala(id) {
+                let uri = 'http://localhost:3000/salas/'+id;
+                this.axios.delete(uri).then(response => {
+                    this.salas.splice(this.salas.indexOf(id), 1);
                 });
             }
         }
